@@ -1,5 +1,3 @@
-Task 10.txt
-
 #include <stdio.h>
 
 /**
