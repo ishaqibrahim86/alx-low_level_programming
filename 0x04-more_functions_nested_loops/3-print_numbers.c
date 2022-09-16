@@ -5,7 +5,6 @@
 
 
 /**
-*
 **print_numbers - function that print all numbers from
 *
 **0 to 9
