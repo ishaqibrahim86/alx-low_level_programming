@@ -5,7 +5,6 @@
 
 
 /**
-*
 * *print_most_numbers - prints numbers except 2 and 4
 *
 * *
