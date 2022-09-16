@@ -5,7 +5,6 @@
 
 
 /**
- *
  * *more_numbers - prints numbers to 14
  *
  * *
