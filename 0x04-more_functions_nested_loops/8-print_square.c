@@ -5,7 +5,6 @@
 
 
 /**
- *
  * *print_square - prints squares
  *
  * *@size: parameter
