@@ -5,20 +5,12 @@
 
 
 /**
-
- * print_diagsums - prints the sum of the two diagonals of
-
- * a square matrix of integers
-
- *
-
- * @a: 2-dimensional array
-
- * @size: size of the matrix
-
- * Return: void
-
- */
+* print_diagsums - prints the sum of the two diagonals of
+* a square matrix of integers
+* @a: 2-dimensional array
+* @size: size of the matrix
+* Return: void
+*/
 
 void print_diagsums(int *a, int size)
 

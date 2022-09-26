@@ -3,20 +3,12 @@
 
 
 /**
-
- * _strstr - finds the first occurrence of the substring needle
-
- *  in the string haystack
-
- *
-
- * @haystack: string to work on
-
- * @needle: substring to match
-
- * Return: pointer to the first match or NULL
-
- */
+* _strstr - finds the first occurrence of the substring needle
+*  in the string haystack
+* @haystack: string to work on
+* @needle: substring to match
+* Return: pointer to the first match or NULL
+*/
 
 char *_strstr(char *haystack, char *needle)
 

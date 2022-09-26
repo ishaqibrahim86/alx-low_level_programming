@@ -3,16 +3,10 @@
 
 
 /**
-
- * print_chessboard - prints the chessboard
-
- *
-
- * @a: 2-dimensional array
-
- * Return: void
-
- */
+* print_chessboard - prints the chessboard
+* @a: 2-dimensional array
+* Return: void
+*/
 
 void print_chessboard(char (*a)[8])
 
