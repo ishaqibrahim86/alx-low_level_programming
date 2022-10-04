@@ -1,14 +1,10 @@
 #include "main.h"
 
 /**
-
- *_strlen - count array
-
- *@s: array of elements
-
- *Return: 1
-
- */
+*_strlen - count array
+*@s: array of elements
+*Return: 1
+*/
 
 
 
@@ -39,16 +35,11 @@ return (i);
 
 
 /**
-
- *_strcpy - copy arrays
-
- *@src: array of elements
-
- *@dest: dest array
-
- *Return: dest
-
- */
+*_strcpy - copy arrays
+*@src: array of elements
+*@dest: dest array
+*Return: dest
+*/
 
 
 
@@ -81,14 +72,10 @@ return (dest);
 
 
 /**
-
- *_strdup - array for prints a string
-
- *@str: array of elements
-
- *Return: pointer
-
- */
+*_strdup - array for prints a string
+*@str: array of elements
+*Return: pointer
+*/
 
 
 
