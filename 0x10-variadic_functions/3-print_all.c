@@ -3,12 +3,9 @@
 
 
 /**
- *
- *  * print_all - prints all
- *
- *   * @format: param
- *
- *    */
+*  * print_all - prints all
+*   * @format: param
+*    */
 
 void print_all(const char * const format, ...)
 
