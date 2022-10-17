@@ -3,14 +3,10 @@
 
 
 /**
- *
- *  * print_numbers - prints num
- *
- *   * @separator: pointer param
- *
- *    * @n: param
- *
- *     */
+*  * print_numbers - prints num
+*   * @separator: pointer param
+*    * @n: param
+*     */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 
