@@ -1,69 +1,82 @@
-#include "main.h"
+#include <unistd.h>
+
+#include <fcntl.h>
 
 #include <stdlib.h>
 
 
 
 /**
-*  * read_textfile - Reads a text file and prints it to POSIX stdout.
-*   * @filename: A pointer to the name of the file.
-*    * @letters: The number of letters the
-*     *           function should read and print.
-*       * Return: If the function fails or filename is NULL - 0.
-*        *         O/w - the actual number of bytes the function can read and print.
-*
-*         */
+*  * read_textfile - prints text from a file
+*    * @filename: name of the file
+*     * @letters: number of characters to read
+*       * Return: actual number of letters read, 0 if end of file
+*        */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 
 {
 
-		ssize_t o, r, w;
+		int file;
 
-			char *buffer;
+			int length, wrotechars;
 
-
-
-				if (filename == NULL)
-
-							return (0);
+				char *buf;
 
 
 
-					buffer = malloc(sizeof(char) * letters);
+					if (filename == NULL || letters == 0)
 
-						if (buffer == NULL)
+								return (0);
 
-									return (0);
+						buf = malloc(sizeof(char) * (letters));
 
+							if (buf == NULL)
 
-
-							o = open(filename, O_RDONLY);
-
-								r = read(o, buffer, letters);
-
-									w = write(STDOUT_FILENO, buffer, r);
+										return (0);
 
 
 
-										if (o == -1 || r == -1 || w == -1 || w != r)
+								file = open(filename, O_RDONLY);
 
-												{
+									if (file == -1)
 
-															free(buffer);
+											{
 
-																	return (0);
+														free(buf);
 
-																		}
+																return (0);
+
+																	}
+
+										length = read(file, buf, letters);
+
+											if (length == -1)
+
+													{
+
+																free(buf);
+
+																		close(file);
+
+																				return (0);
+
+																					}
 
 
 
-											free(buffer);
-
-												close(o);
+												wrotechars = write(STDOUT_FILENO, buf, length);
 
 
 
-													return (w);
+													free(buf);
+
+														close(file);
+
+															if (wrotechars != length)
+
+																		return (0);
+
+																return (length);
 
 }
